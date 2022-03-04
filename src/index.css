@@ -25,16 +25,6 @@ html {
   }
 }
 
-body {
-  box-sizing: border-box;
-  padding: 3rem;
-}
-@media (max-width: 56.25em) {
-  body {
-    padding: 0;
-  }
-}
-
 @keyframes leftIn {
   0% {
     opacity: 0;
@@ -76,10 +66,18 @@ body {
     transform: translate(0);
   }
 }
+.nav {
+  height: 6.125rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  z-index: 1;
+}
 
-.navbar {
-  border: solid black 5px;
-  padding: 20px 0px;
+.nav__blue {
+  background-color: rgba(0, 0, 25, 0.8);
 }
 
 .header__container {
@@ -114,7 +112,7 @@ body {
 .header__text-box {
   text-align: center;
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -132,7 +130,7 @@ body {
   letter-spacing: 0.6rem;
   animation: leftIn 0.75s ease-out;
   text-shadow: 1px 1px 2px yellow;
-  font-family: "optima"
+  font-family: "optima";
 }
 @media (max-width: 37.5em) {
   .heading-primary--main {
@@ -147,7 +145,7 @@ body {
   letter-spacing: 0.3rem;
   animation: rightIn 0.75s ease-out;
   text-shadow: 1px 1px 2px pink;
-  font-family: "optima"
+  font-family: "optima";
 }
 @media (max-width: 37.5em) {
   .heading-primary--sub {
@@ -163,8 +161,8 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   font-size: 1.4rem;
-  text-shadow: .2px .2px .2px #551256;
-  font-family: "optima"
+  text-shadow: 0.2px 0.2px 0.2px #551256;
+  font-family: "optima";
 }
 
 .btn:hover {
@@ -173,7 +171,7 @@ body {
 }
 
 .btn:active {
-  transform: translateY(-0.1rem);
+  /* transform: translateY(-0.1rem); */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.21);
 }
 
@@ -206,10 +204,14 @@ body {
   background-color: #64495e;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.21);
-  transform: translateY(0px);
+  /* transform: translateY(0px); */
+}
+
+.text {
+  font-size: 200px;
 }

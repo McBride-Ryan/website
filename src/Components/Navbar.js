@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default function Navbar() {
-  return (
-    <div className='navbar'>Navbar</div>
-  )
+const Nav = () => {
+    const [show, setShow] = useState(false)
+    const controlNavbar = () => {
+        if (window.scrollY > 100) {
+            setShow(true)
+        } else {
+            setShow(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar)
+        return () => {
+            window.removeEventListener('scroll', controlNavbar)
+        }
+    }, [])
+    return (
+        <div className={`nav ${show && 'nav__blue'}`}>
+
+        </div>
+    )
 }
+
+export default Nav
