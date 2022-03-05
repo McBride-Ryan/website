@@ -548,7 +548,7 @@ nav {
   text-align: center;
   padding-bottom: 3rem;
   font-size: 4rem;
-  display: inline;
+  display: inline
 }
 
 .portfolio-title:hover{
@@ -561,9 +561,18 @@ nav {
   grid-auto-rows: 35rem auto;
   column-gap: 5rem;
 }
+@media (max-width: 56.25em){
+  .wrapper{
+    display: block;
+    padding: 25rem 0 10rem 0;
+  }
+}
+
 .box{
   border: solid black 1px;
+  margin-bottom: 1rem;
 }
+
 .box-2{
   border: solid blue 1px;
 }
@@ -577,3 +586,126 @@ nav {
   text-align: center;
   padding: 10px 0;
 }
+
+.section-tours {
+  /* margin-top: -20rem; */
+  background-color: #f7f7f7;
+  padding-top: 10rem; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 25rem 0 10rem 0; } }
+
+      .card {
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: relative;
+        height: 40rem; }
+        .card__side {
+          color: #fff;
+          font-size: 2rem;
+          height: 30rem;
+          transition: all .8s ease;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          backface-visibility: hidden;
+          border-radius: 3px;
+          overflow: hidden;
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+          .card__side--front {
+            background-color: #fff; }
+          .card__side--back {
+            transform: rotateY(180deg); }
+            .card__side--back-1 {
+              background-image: linear-gradient(to right bottom, #eca026, rgba(185, 19, 19, 0.911)); }
+            .card__side--back-2 {
+              background-image: linear-gradient(to right bottom, #9c1283, #aa2b15); }
+            .card__side--back-3 {
+              background-image: linear-gradient(to right bottom, #44b2e6, #05044d); }
+        .card:hover .card__side--front {
+          transform: rotateY(-180deg); }
+        .card:hover .card__side--back {
+          transform: rotateY(0deg); }
+        .card__picture {
+          background-size: cover;
+          background-position: center center;
+          height: 12rem;
+          background-blend-mode: screen;
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+          
+        .card__heading {
+          font-size: 2.8rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-align: right;
+          color: #fff;
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          width: 70%;
+          line-height: 3.5rem; }
+        .card__heading-span {
+          padding: 1rem 1.5rem;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone; }
+          .card__heading-span--1 {
+            background-image: linear-gradient(to right bottom, rgba(236, 160, 38, 0.9), rgba(185, 19, 19, 0.9)); }
+          .card__heading-span--2 {
+            background-image: linear-gradient(to right bottom, rgba(156, 18, 131, 0.9), rgba(170, 43, 21, 0.9)); }
+          .card__heading-span--3 {
+            background-image: linear-gradient(to right bottom, rgba(68, 178, 230, 0.9), rgba(5, 4, 77, 0.9)); }
+        .card__details {
+          padding: 1rem 3rem;
+          color: darkslategrey; }
+          .card__details ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto; }
+          .card__details li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 0.5rem; }
+            .card__details li:not(:last-child) {
+              border-bottom: 1px solid #eee; }
+        .card__cta {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          text-align: center; }
+        .card__box {
+          text-align: center; }
+        .card__description {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem; }
+        
+        @media (max-width: 56.25em) {
+          .card {
+            height: auto;
+            border-radius: 3px;
+            background-color: #fff;
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+            margin: 0 3rem; }
+            .card__side {
+              height: auto;
+              position: relative;
+              box-shadow: none; }
+              .card__side--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%); }
+            .card:hover .card__side--front {
+              transform: rotateY(0); }
+            .card .card__details {
+              padding: 1rem 3rem; }
+            .card__cta {
+              position: relative;
+              top: 0%;
+              left: 0%;
+              transform: translate(0);
+              width: 100%;
+              padding: 7rem 4rem 4rem 4rem; }
+            .card__box {
+              text-align: center; } }

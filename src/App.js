@@ -3,6 +3,7 @@ import Nav from './Components/Navbar'
 import Hero from './Components/Hero'
 import Callout from './Components/Callout'
 import Benefit from './Components/Benefit'
+import Cards from './Components/Cards'
 import Projects from './Components/Projects'
 
 export default function App() {
@@ -12,7 +13,8 @@ export default function App() {
       <Hero /> 
       <Callout/>
       <Benefit/>
-      <Projects/>
+      <Cards/>
+      {/* <Projects/> */}
     </div>
   )
 }

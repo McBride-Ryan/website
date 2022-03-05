@@ -3,10 +3,10 @@ import React from 'react'
 export default function Projects() {
   return (
     <div className="project-portfolio">
-        <h1 className="portfolio-title">Portfolio Projects</h1>
+        <h1 className="">Portfolio Projects</h1>
      <div className="projects"> 
-        <div className="wrapper">
-            <div className="box">
+        <div className=" row">
+            <div className=" col-1-of-3">
                 <img className="img-card" src="https://miro.medium.com/max/1200/0*h0jzbOlN8sF3Vd2p.png"/>
                 <h2 className="box-2 heading-four">
                 One
