@@ -46,9 +46,9 @@ const Nav = () => {
                     />
                     <div className="nav-menu">
                         <a href="/" className='nav-links'>Home</a>
-                        <a href="/" className='nav-links'>GitHub</a>
-                        <a href="/" className='nav-links'>LinkedIn</a>
-                        <a href="/" className='nav-links'>Contact</a>
+                        <a href="https://github.com/McBride-Ryan" className='nav-links'>GitHub</a>
+                        <a href="https://www.linkedin.com/in/ryan-mcbride-50b242218/" className='nav-links'>LinkedIn</a>
+                        {/* <a href="/" className='nav-links'>Contact</a> */}
                     </div>
 
                     {/* <button className='hamburger'>

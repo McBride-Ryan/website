@@ -4,7 +4,8 @@ import Hero from './Components/Hero'
 import Callout from './Components/Callout'
 import Benefit from './Components/Benefit'
 import Cards from './Components/Cards'
-import Projects from './Components/Projects'
+import Footer from './Components/Footer'
+
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       <Callout/>
       <Benefit/>
       <Cards/>
-      {/* <Projects/> */}
+      <Footer/>
     </div>
   )
 }

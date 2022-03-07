@@ -23,7 +23,7 @@ export default function Callout() {
                         <br></br>
                         <br></br><i>"If you get one percent better each day for one year, you'll end up thirty-seven times better by the time you are done."</i><br></br><br></br>-- Atomic Habits (James Clear, 2018)
                     </p>
-                    <h3 className="heading-tertiary u-margin-bottom-small">An Agile Collaborator</h3>
+                    <h3 className="heading-tertiary u-margin-bottom-small">A Reliable Collaborator</h3>
                     <p className="paragraph">
                         I have worked as a Professional Software Engineer, and collaborated with NBC, FOX, and Showtime as an SAG/AFTRA Union Member.  
                     </p>
