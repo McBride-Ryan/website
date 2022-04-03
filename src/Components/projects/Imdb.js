@@ -17,7 +17,7 @@ export default function Imdb() {
                 </a>
                 <div class="card__description">
                     <p>
-                        A fullstack movie application with authentication, middleware and API requests.
+                        Movie application with authentication, middleware and API requests.
                     </p>
                 </div>
                 <div class="card__details">

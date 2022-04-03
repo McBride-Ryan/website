@@ -13,7 +13,7 @@ export default function Cards() {
                     Project Portfolio
                 </h2>
         </div>
-        <div class="row">
+        <div className="row">
             <Imdb/>
             <BadBank/>
             <Atomic/>

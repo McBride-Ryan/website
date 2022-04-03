@@ -19,14 +19,14 @@ export default function Atomic() {
                 </a>
                 <div class="card__description">
                     <p>
-                        A mock full-stack Habit Tracker using React. Using JSON as data storage. 
+                        Habit Tracker using React. Using JSON as data storage to mock backend. 
                     </p>
                 </div>
                 <div class="card__details">
                     <ul>
                         <li>React</li>
-                        <li>JSX</li>
-                        <li>REST API</li>
+                        <li>Node JS</li>
+                        <li>Express</li>
                         <li>MongoDB</li>
                     </ul>
                     <div className='card__cta'><a href="https://github.com/McBride-Ryan/Atomic-Habits/tree/master" className='card__btn' target="_blank" rel="noreferrer">Source Code</a></div>
