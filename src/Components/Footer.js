@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="footer-row">
           <div className="footer-name-ryan">
             <p className="footer__copyright">
-                <a href="/" className="footer__link">Site by <br></br> Ryan McBride</a>
+                <a href="/" className="footer__link">Site by <br></br> Ryan McBride LLC</a>
             </p>
         </div> 
       </div>
