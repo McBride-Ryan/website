@@ -9,7 +9,7 @@
             <a href="/team-stats">Team Stats</a>
         </li>
         <li class="py-1 hover:underline">
-            <a href="/quarterbacks">Quarterbacks</a>
+            <RouterLink to="/api/v1/quarterbacks">Quarterbacks</RouterLink>
         </li>
         <li class="py-1 hover:underline">
             <a href="/running-backs">Running Backs</a>
