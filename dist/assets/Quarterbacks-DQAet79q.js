@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as c}from"./index-cKdH37Jc.js";const r={created(){console.log("hello world")}};function t(s,a,n,l,_,p){return c(),o("div",null," QB ")}const f=e(r,[["render",t]]);export{f as default};
