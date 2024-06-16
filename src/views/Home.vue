@@ -7,7 +7,6 @@
         style="height: 50px; width: 50px; border-radius: 50%; margin: 1rem;"
       />
       <div class="nav-menu">
-        <RouterLink to="/">Home</RouterLink>
         <a href="https://github.com/McBride-Ryan" class="nav-links">GitHub</a>
         <a
           href="https://www.linkedin.com/in/ryan-mcbride-50b242218/"
@@ -42,21 +41,20 @@
                 <div className="col-1-of-2">
                     <h3 className="heading-tertiary u-margin-bottom-small">Motivated To Produce Results</h3>
                     <p className="paragraph">
-                        As a persistent self-motivated learner, I use the fundementals and discipline to refine my craft: 
+                        As a persistent self-motivated learner, I use the fundementals and discipline to refine my craft.
                         <br></br>
-                        <br></br><i>"If you get one percent better each day for one year, you'll end up thirty-seven times better by the time you are done."</i><br></br><br></br>-- Atomic Habits (James Clear, 2018)
                     </p>
                     <h3 className="heading-tertiary u-margin-bottom-small">A Reliable Collaborator</h3>
                     <p className="paragraph">
-                        I have worked as a Professional Software Engineer, and collaborated with NBC, FOX, and Showtime as an SAG/AFTRA Union Member.  
+                        Along with being a Full Stack Devloper, I am a proud SAG/AFTRA Member who's collaborated with NBC, FOX, and Showtime Network Television Shows
                     </p>
 
                 </div>
                 <div className="col-1-of-2">
                     <div className="composition">
                         <img src='/src/img/javascript.png' alt="JS" className="composition__photo composition__photo--p1" />
-                        <img src='/src/img/php.png' alt="Node" className="composition__photo composition__photo--p3" />
-                        <img src='/src/img/react.png' alt="React" className="composition__photo composition__photo--p2" />
+                        <img src='/src/img/aws.png' alt="aws" className="composition__photo composition__photo--p2" />
+                        <img src='/src/img/python.png' alt="python" className="composition__photo composition__photo--p3" />
                     </div>
                 </div>
             </div>
@@ -69,7 +67,7 @@
                 <p className="feature-box__text">
                     <ul>
                         <li>HTML | CSS</li>
-                        <li>JavaScript | React</li>
+                        <li>Vue | React</li>
                     </ul>
                 </p>
             </div>
@@ -77,10 +75,10 @@
         <div className="col-1-of-4">
             <div className="feature-box">
                 <i className="feature-box__icon icon-basic-share"></i>
-                <h3 className="heading-tertiary u-margin-bottom-small">Server</h3>
+                <h3 className="heading-tertiary u-margin-bottom-small">Back End</h3>
                 <p className="feature-box__text">
                     <ul>
-                        <li>NodeJS | Express</li>
+                        <li>Python | Django</li>
                         <li>PHP | Laravel</li>
                     </ul>
                 </p>
@@ -92,8 +90,8 @@
                 <h3 className="heading-tertiary u-margin-bottom-small">Database</h3>
                 <p className="feature-box__text">
                     <ul>
+                        <li>PostgreSQL</li>
                         <li>MongoDB</li>
-                        <li>MySQL</li>
                     </ul>
                 </p>
             </div>
@@ -104,7 +102,7 @@
                 <h3 className="heading-tertiary u-margin-bottom-small">Deployment</h3>
                 <p className="feature-box__text">
                     <ul>
-                        <li>Git</li>
+                        <li>AWS</li>
                         <li>Docker</li>
                     </ul>
                 </p>
@@ -218,7 +216,7 @@
         <div className="footer-row">
           <div className="footer-name-ryan">
             <p className="footer__copyright">
-                <a href="/" className="footer__link"><RouterLink to="/api/v1">Site By</RouterLink><br>Ryan McBride</a>
+                <a href="/" className="footer__link"><RouterLink v-on:click="enter" to="/api/v1">Site By</RouterLink><br>Ryan McBride</a>
             </p>
         </div> 
       </div>
@@ -257,6 +255,14 @@ export default {
         this.content = false;
       }
     },
+    enter(){
+        let answer = prompt('Congrats you have stumbled into something unique...')
+        if (answer == 'animus'){
+            this.$router.push('/api/v1');
+        } else{
+            this.$router.push('/');
+        }
+    }
   },
 };
 </script>
