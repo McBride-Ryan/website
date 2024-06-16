@@ -74,8 +74,8 @@
                 <td v-bind:id="stats.rush_yds_per_att" :style="{'background-color': getBackgroundColor(player.rush_yds_per_att, this.stats.rush_yds_per_att)}" class="px-1 text-center py-1">
                     {{ parseFloat(player.rush_yds_per_att).toFixed(1) }}
                 </td>
-                <td v-bind:id="stats.rush_td" :style="{'background-color': getBackgroundColor(player.rush_td, this.stats.rush_td)}" class="px-1 text-center py-1">
-                    {{ parseFloat(player.rush_td).toFixed(1) }}
+                <td v-bind:id="stats.rush_tds" :style="{'background-color': getBackgroundColor(player.rush_tds, this.stats.rush_tds)}" class="px-1 text-center py-1">
+                    {{ parseFloat(player.rush_tds).toFixed(1) }}
                 </td>
                 <!--  -->
 
@@ -113,9 +113,9 @@
             theme-color="#C3B367"
         >
             <template #item-headshot="player">
-                <div class="grid h-9">
+                <div class="grid">
                     <td class="place-self-center">
-                        <img :src="player.headshot" class="h-9" :alt="player.name" />
+                        <img :src="player.headshot" class="" :alt="player.name" />
                     </td>
                 </div>
             </template>
@@ -142,18 +142,73 @@
                 </div>
             </template>
             <template #item-comp="player">
-                <div v-bind:id="this.stats.comp" :style="{'background-color': this.getBackgroundColor(player.comp, this.stats.comp)}" class="grid h-9">
+                <div v-bind:id="this.stats.comp" :style="{'background-color': this.getBackgroundColor(player.comp, this.stats.comp)}" class="grid">
                     <td class="place-self-center" >{{ player.comp }}</td>
                 </div>
             </template>
             <template #item-att="player">
-                <div v-bind:id="this.stats.att" :style="{'background-color': this.getBackgroundColor(player.att, this.stats.att)}" class="grid h-9">
+                <div v-bind:id="this.stats.att" :style="{'background-color': this.getBackgroundColor(player.att, this.stats.att)}" class="grid">
                     <td class="place-self-center" >{{ player.att }}</td>
                 </div>
             </template>
             <template #item-yds="player">
-                <div v-bind:id="this.stats.yds" :style="{'background-color': this.getBackgroundColor(player.yds, this.stats.yds)}" class="grid h-9">
+                <div v-bind:id="this.stats.yds" :style="{'background-color': this.getBackgroundColor(player.yds, this.stats.yds)}" class="grid">
                     <td class="place-self-center" >{{ player.yds }}</td>
+                </div>
+            </template>
+            <template #item-tds="player">
+                <div v-bind:id="this.stats.tds" :style="{'background-color': this.getBackgroundColor(player.tds, this.stats.tds)}" class="grid">
+                    <td class="place-self-center" >{{ player.tds }}</td>
+                </div>
+            </template>
+            <template #item-ints="player">
+                <div v-bind:id="this.stats.ints" :style="{'background-color': this.getBackgroundColor(player.ints, this.stats.ints)}" class="grid">
+                    <td class="place-self-center" >{{ player.ints }}</td>
+                </div>
+            </template>
+            <template #item-qbr="player">
+                <div v-bind:id="this.stats.qbr" :style="{'background-color': this.getBackgroundColor(player.qbr, this.stats.qbr)}" class="grid">
+                    <td class="place-self-center" >{{ (player.qbr).toFixed(1) }}</td>
+                </div>
+            </template>
+            <template #item-rating="player">
+                <div v-bind:id="this.stats.rating" :style="{'background-color': this.getBackgroundColor(player.rating, this.stats.rating)}" class="grid">
+                    <td class="place-self-center" >{{ (player.rating).toFixed(1) }}</td>
+                </div>
+            </template>
+            <template #item-rush_att="player">
+                <div v-bind:id="this.stats.rush_att" :style="{'background-color': this.getBackgroundColor(player.rush_att, this.stats.rush_att)}" class="grid">
+                    <td class="place-self-center" >{{ player.rush_att }}</td>
+                </div>
+            </template>
+            <template #item-rush_yds="player">
+                <div v-bind:id="this.stats.rush_yds" :style="{'background-color': this.getBackgroundColor(player.rush_yds, this.stats.rush_yds)}" class="grid">
+                    <td class="place-self-center" >{{ player.rush_yds }}</td>
+                </div>
+            </template>
+            <template #item-rush_yds_per_att="player">
+                <div v-bind:id="this.stats.rush_yds_per_att" :style="{'background-color': this.getBackgroundColor(player.rush_yds_per_att, this.stats.rush_yds_per_att)}" class="grid">
+                    <td class="place-self-center" >{{ (player.rush_yds_per_att).toFixed(1) }}</td>
+                </div>
+            </template>
+            <template #item-rush_yds_per_gm="player">
+                <div v-bind:id="this.stats.rush_yds_per_gm" :style="{'background-color': this.getBackgroundColor(player.rush_yds_per_gm, this.stats.rush_yds_per_gm)}" class="grid">
+                    <td class="place-self-center" >{{ (player.rush_yds_per_gm).toFixed(1) }}</td>
+                </div>
+            </template>
+            <template #item-rush_tds="player">
+                <div v-bind:id="this.stats.rush_tds" :style="{'background-color': this.getBackgroundColor(player.rush_tds, this.stats.rush_tds)}" class="grid">
+                    <td class="place-self-center" >{{ player.rush_tds }}</td>
+                </div>
+            </template>
+            <template #item-ppr="player">
+                <div v-bind:id="this.stats.ppr" :style="{'background-color': this.getBackgroundColor(player.ppr, this.stats.ppr)}" class="grid">
+                    <td class="place-self-center" >{{ (player.ppr).toFixed(1) }}</td>
+                </div>
+            </template>
+            <template #item-ppr_per_gm="player">
+                <div v-bind:id="this.stats.ppr_per_gm" :style="{'background-color': this.getBackgroundColor(player.ppr_per_gm, this.stats.ppr_per_gm)}" class="grid">
+                    <td class="place-self-center" >{{ (player.ppr_per_gm).toFixed(1) }}</td>
                 </div>
             </template>
         </EasyDataTable>
@@ -178,7 +233,7 @@ export default{
             tier_4: "#f3efe0",
             headers:[
                 { text: "Player", value: "headshot" },
-                { text: "Name", value: "name", sortable: true, },
+                { text: "Name", value: "name", sortable: true,width: 120 },
                 { text: "Games", value: "g", sortable: true, },
                 { text: "Age", value: "age", sortable: true, },
                 { text: "Debut", value: "debut", sortable: true, },
@@ -190,12 +245,13 @@ export default{
                     { text: "QBR", value: "qbr", sortable: true},
                     { text: "Rating", value: "rating", sortable: true},
                     // // Rushing
-                    // { text: "Att", value: "rush_att", sortable: true, },
-                    // { text: "Yds", value: "rush_yds", sortable: true, },
-                    // { text: "Y/A", value: "rush_yds_per_att", sortable: true, },
-                    // { text: "TD", value: "rush_td", sortable: true, },
-                    // { text: "PPR", value: "fantasy_points_ppr", sortable: true, },
-                    // { text: "PPR/G", value: "ppr_per_gm", sortable: true, },
+                    { text: "Rush ATT", value: "rush_att", sortable: true, },
+                    { text: "Rush YDS", value: "rush_yds", sortable: true, },
+                    { text: "Y/A", value: "rush_yds_per_att", sortable: true, },
+                    { text: "Y/G", value: "rush_yds_per_gm", sortable: true, },
+                    { text: "TD", value: "rush_tds", sortable: true, },
+                    { text: "PPR", value: "ppr", sortable: true, },
+                    { text: "PPR/G", value: "ppr_per_gm", sortable: true, },
                 ],
             stats: {
                 age: 'age',
@@ -215,7 +271,7 @@ export default{
                 rec_yds: 'rec_yds',
                 rec_yds_per_rec: 'rec_yds_per_rec',
                 rush_att: 'rush_att',
-                rush_td: 'rush_td',
+                rush_tds: 'rush_tds',
                 rush_yds: 'rush_yds',
                 rush_yds_per_att: 'rush_yds_per_att',
                 targets: 'targets',
@@ -242,7 +298,7 @@ export default{
                     rec_yds: 1.8,
                     rec_yds_per_rec: 1.8,
                     rush_att: 134.8,
-                    rush_td: 10.05,
+                    rush_tds: 10.05,
                     rush_yds: 628.4,
                     rush_yds_per_att: 5.69,
                     targets: 1,
@@ -267,7 +323,7 @@ export default{
                     rec_yds: 0,
                     rec_yds_per_rec: 0,
                     rush_att: 78.05,
-                    rush_td: 5,
+                    rush_tds: 5,
                     rush_yds: 400.2,
                     rush_yds_per_att: 5.47,
                     targets: 1,
@@ -292,7 +348,7 @@ export default{
                     rec_yds: 0,
                     rec_yds_per_rec: 0,
                     rush_att: 64,
-                    rush_td: 4,
+                    rush_tds: 4,
                     rush_yds: 282,
                     rush_yds_per_att: 5,
                     targets: 0,
@@ -317,7 +373,7 @@ export default{
                     rec_yds: 0,
                     rec_yds_per_rec: 0,
                     rush_att: 40.5,
-                    rush_td: 2,
+                    rush_tds: 2,
                     rush_yds: 180,
                     rush_yds_per_att: 4.22,
                     targets: 0,
