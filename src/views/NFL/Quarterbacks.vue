@@ -185,7 +185,7 @@
                 <div v-bind:id="this.stats.rush_yds" :style="{'background-color': this.getBackgroundColor(player.rush_yds, this.stats.rush_yds)}" class="grid">
                     <td class="place-self-center" >{{ player.rush_yds }}</td>
                 </div>
-            </template>
+            </template>  
             <template #item-rush_yds_per_att="player">
                 <div v-bind:id="this.stats.rush_yds_per_att" :style="{'background-color': this.getBackgroundColor(player.rush_yds_per_att, this.stats.rush_yds_per_att)}" class="grid">
                     <td class="place-self-center" >{{ (player.rush_yds_per_att).toFixed(1) }}</td>

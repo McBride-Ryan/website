@@ -52,9 +52,11 @@
                 </div>
                 <div className="col-1-of-2">
                     <div className="composition">
-                        <img src='/src/img/javascript.png' alt="JS" className="composition__photo composition__photo--p1" />
-                        <img src='/src/img/aws.png' alt="aws" className="composition__photo composition__photo--p2" />
-                        <img src='/src/img/python.png' alt="python" className="composition__photo composition__photo--p3" />
+                        <div>
+                            <img src='/src/img/javascript.png' alt="JS" className="composition__photo composition__photo--p1" />
+                            <img src='/src/img/aws.png' alt="aws" className="composition__photo composition__photo--p2" />
+                            <img src='/src/img/python.png' alt="python" className="composition__photo composition__photo--p3" />
+                        </div>
                     </div>
                 </div>
             </div>
